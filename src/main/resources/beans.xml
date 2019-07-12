@@ -9,31 +9,7 @@
 
 <context:annotation-config/>
 
-    <!-- bean definitions here -->
-  <bean id="actor" class="com.stackroute.domain.Actor">
-      <constructor-arg name="name" value="SRK"/>
-      <constructor-arg name="gender" value="Male"/>
-      <constructor-arg name="age" value="51"/>
-  </bean>
-
-    <!--<bean id="actor2" class="com.stackroute.domain.Actor">
-        <constructor-arg index="0" value="Salman"/>
-        <constructor-arg index="1" value="Male"/>
-        <constructor-arg index="2" value="51"/>
-    </bean>-->
-
-    <!--<bean id="actor3" class="com.stackroute.domain.Actor">
-        <constructor-arg type="String" value="Amir"/>
-        <constructor-arg type="String" value="Male"/>
-        <constructor-arg type="int" value="51"/>
-    </bean>-->
-
-
-    <bean name="movie2,movie1" class="com.stackroute.domain.Movie" scope="prototype" autowire="byType">
-
-
-    </bean>
-
+ <bean name="beanlifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
 
 
 </beans>
