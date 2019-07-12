@@ -9,7 +9,8 @@
 
 <context:annotation-config/>
 
- <bean name="beanlifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
+ <bean name="beanlifecycle" class="com.stackroute.demo.BeanLifecycleDemoBean" ></bean>
+    <bean name="beanpost" class="com.stackroute.demo.BeanPostProcessorDemoBean"/>
 
 
 </beans>
