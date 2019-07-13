@@ -11,5 +11,15 @@ public class Main {
         ApplicationContext context= new ClassPathXmlApplicationContext("beans.xml");
         Movie movie=context.getBean("movie",Movie.class);
         movie.printAboutMovieActor();
+        
+         BeanFactory beanFactory=new XmlBeanFactory(new ClassPathResource("beans.xml"));
+        Movie mv1= (Movie) beanFactory.getBean("movie");
+        mv1.printAboutMovieActor();
+
+        BeanDefinitionRegistry factory = new XmlBeanFactory(new ClassPathResource("beans.xml));
+        XmlBeanDefinitionReader rdr = new XmlBeanDefinitionReader(factory);
+        Movie mv2 =((XmlBeanFactory)factory).getBean("movie",Movie.class);
+        mv2.printAboutMovieActor();
+
     }
 }
