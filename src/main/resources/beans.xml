@@ -12,7 +12,7 @@
   </bean>
 
 
-    <bean id="movie" class="com.stackroute.domain.Movie">
+    <bean id="movie,mv1,mv2" class="com.stackroute.domain.Movie">
         <property name="actor" ref="actor"/>
     </bean>
 
