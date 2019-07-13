@@ -20,7 +20,7 @@ public class Main {
         System.out.println();
         movie2.setBeanFactory(beanFactory);
         movie1.setApplicationContext(context);
-        movie1.setBeanName("Movie Bean");
+        
 
 
 
